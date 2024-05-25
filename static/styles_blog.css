@@ -1,0 +1,124 @@
+body {
+    --s: 84px; /* control the size*/
+    --c1: #f2f2f2;
+    --c2: #cdcbcc;
+    --c3: #999999;
+    
+    --_g: 0 120deg,#0000 0;
+    background:
+      conic-gradient(from    0deg at calc(500%/6) calc(100%/3),var(--c3) var(--_g)),
+      conic-gradient(from -120deg at calc(100%/6) calc(100%/3),var(--c2) var(--_g)),
+      conic-gradient(from  120deg at calc(100%/3) calc(500%/6),var(--c1) var(--_g)),
+      conic-gradient(from  120deg at calc(200%/3) calc(500%/6),var(--c1) var(--_g)),
+      conic-gradient(from -180deg at calc(100%/3) 50%,var(--c2)  60deg,var(--c1) var(--_g)),
+      conic-gradient(from   60deg at calc(200%/3) 50%,var(--c1)  60deg,var(--c3) var(--_g)),
+      conic-gradient(from  -60deg at 50% calc(100%/3),var(--c1) 120deg,var(--c2) 0 240deg,var(--c3) 0);
+    background-size: calc(var(--s)*1.732) var(--s);
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: var(--c2);
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+      
+}
+
+header div{
+    /*background: white;*/
+    width: max-content;
+    text-align: center;
+    border-radius: 15px;
+    padding: 13px;
+    width: 70%;
+}
+header div h1 {
+    font-weight: 600;
+    background-image: linear-gradient(to left, #000000, #00ff14);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-top: 0;
+  }
+
+
+img {
+    border-radius: 50%;
+    width: 15%;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    bottom:0;
+    width: 100%;
+    position: relative;
+}
+
+footer div{
+    padding: 1rem;
+}
+
+section {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 17px;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-width: thin;
+    border-style: ridge;
+    background-color: #ffffff; 
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 25vw;
+    height: max-content;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    max-width: 100vw;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    overflow-x: hidden;
+
+  }
+  
+
+  @media screen and (max-width: 651px) {
+    main{
+        flex-direction: column;
+    }
+    section{
+        width: 50vw;
+    }
+
+  }
+
+  @media screen and (max-width: 1001px) {
+    footer{
+        position: relative;
+    }
+   
+
+  }
